@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic Defender</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">ARCADE // SECTOR 07</p>
+        <h1>Cosmic Defender</h1>
+      </div>
+      <div class="stats" aria-live="polite">
+        <div class="stat">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span>Lives</span>
+          <strong id="lives">3</strong>
+        </div>
+        <div class="stat power-stat">
+          <span>Power</span>
+          <strong id="power">None</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="game-frame" aria-label="Cosmic Defender game">
+      <canvas id="gameCanvas"></canvas>
+      <div class="overlay" id="gameOver" hidden>
+        <p class="eyebrow">MISSION ENDED</p>
+        <h2>Ship Lost</h2>
+        <p>You defended the sector for <strong id="finalScore">0</strong> points.</p>
+        <button id="restartButton" type="button">Play Again</button>
+      </div>
+    </section>
+
+    <footer class="controls">
+      <span><kbd>A</kbd><kbd>←</kbd> Move left</span>
+      <span><kbd>D</kbd><kbd>→</kbd> Move right</span>
+      <span><kbd>Space</kbd> Fire lasers</span>
+      <span><b>✦</b> Spread beam</span>
+      <span><b>+</b> Extra life</span>
+      <span><b>500</b> Bonus points</span>
+      <span><b>S</b> Shield (10 sec)</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
